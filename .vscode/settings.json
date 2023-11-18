@@ -9,7 +9,10 @@
   "stylelint.validate": ["css", "scss"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "yaml.schemas": {
-    "docs/schema.json": "mkdocs.yml"
+    "https://squidfunk.github.io/mkdocs-material/schema.json": [
+      "mkdocs.yml",
+      "file:///root/labs/revalani.github.io/mkdocs.yml"
+    ]
   },
   "yaml.customTags": [
     "!ENV scalar",

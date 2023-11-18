@@ -1,3 +1,8 @@
-site_name: revalani.github.io
+site_name: revalani-github-io 
 theme:
   name: material
+  
+# plugins:
+  # - optimize:
+  #     # optimize_png_speed: 10
+  #     # enabled: !ENV [CI, false]
