@@ -1,8 +1,79 @@
 site_name: revalani-github-io 
 theme:
   name: material
+  language: en
+  palette: 
+    scheme: default
+    primary: indigo
+    accent: indigo
+  features:
+    # - navigation.tabs
+    - navigation.path
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    # - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    # - content.code.annotation
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+
+copyright: >
+  &copy; 2023 <a href="https://github.com/revalani" target="_blank">Renan Valani</a>
+  <br> 
+  <a href="#__consent">Change cookie settings</a>
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://qithub.com/revalani
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/renanvalani/
+
+  plugins:
+  - optimize:
+      enabled: !ENV [CI, false]
+      optimize_png_speed: 10
+
+  - search:
+    enabled: true
+    lang: pt
+    separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+
+  - privacy:
+    enabled: !ENV [CI, false]
+    assets: true
+    concurrency: 4
+
   
-# plugins:
-  # - optimize:
-  #     # optimize_png_speed: 10
-  #     # enabled: !ENV [CI, false]
+  consent:
+    title: Cookie consent
+    description: >- 
+      Utilizamos cookies para reconhecer as suas repetidas visitas e preferências, bem como para medir a eficácia da nossa documentação e se os usuários encontre o que eles estão procurando. Com o seu consentimento, você está nos ajudando a melhorar nossa documentação.
+    actions:
+      - accept
+      - reject
+      - manage
+    cookies:
+      analytics:
+        name: Google Analytics
+        checked: true
